@@ -11,6 +11,7 @@ public class Student implements Serializable {
     private Integer age;
 
     public Student() {
+        System.out.println("真无语了");
     }
 
     public Student(Integer id, String name, String phone, Integer age) {
