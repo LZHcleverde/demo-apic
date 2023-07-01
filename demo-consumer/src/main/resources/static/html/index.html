@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <script src="../js/jquery.min.js"></script>
+</head>
+<body>
+
+    <input type="text" id="t1">
+    <input type="button" value="提交" id="btn">
+</body>
+<script type="text/javascript">
+
+    $("#btn").click(function () {
+        var v = $("#t1").val();
+        $.ajax({
+            url:"/myDemo/student/query",
+            data:"id="+v,
+            type:"get",
+            dataType:"text",
+            success:function (date){
+                alert(date)
+            }
+        })
+    })
+
+</script>
+</html>
