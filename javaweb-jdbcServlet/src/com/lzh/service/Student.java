@@ -8,5 +8,6 @@ public class Student {
 
         System.out.println("master");
 
+        System.out.println("javaweb ");
     }
 }
