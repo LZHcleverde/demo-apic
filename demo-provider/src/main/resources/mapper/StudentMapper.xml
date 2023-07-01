@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lzhp.mapper.StudentMapper">
+
+<!--    Student queryPhone(@Param("phone") String phone);-->
+    <select id="queryPhone" resultType="com.lzhapi.model.Student">
+        select id, name, phone, age from student where phone = #{phone}
+    </select>
+
+
+<!--    int insertStu(@Param("stu") Student student);-->
+    <insert id="insertStu">
+        insert into student(name,phone,age) values(#{name},#{phone},#{age})
+    </insert>
+
+
+<!--    Student selectById(@Param("id") Integer id);-->
+    <select id="selectById" resultType="com.lzhapi.model.Student">
+        select * from student where id = #{id}
+    </select>
+
+
+</mapper>
